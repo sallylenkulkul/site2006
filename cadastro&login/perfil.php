@@ -53,7 +53,6 @@
             <form action="crud3.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="foto" id="image-input" class="envimg" style="display: none" onchange="sendImage()">
                 <div class="botao1" value="foto" id="foto" onclick="openFileInput()">Importar capa</div>
-            </form>
         </div>
         <div class="caixa4">
             <div class="obra">
@@ -67,6 +66,7 @@
             </div>
         </div>
         <input type="submit" value="Salvar" name="salvar" class="botao2">
+        </form>
         <form action="logout.php" method="post">
             <input type="submit" value="Logout" name="logout" class="botao3">
         </form>

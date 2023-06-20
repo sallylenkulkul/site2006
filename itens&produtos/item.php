@@ -1,3 +1,13 @@
+<?php
+
+    include("conecta3.php");
+    $comentario  = $_POST["comentario"];
+    if(isset($_POST["avaliar"]))
+    {
+    $comando = $pdo->prepare("INSERT INTO comentarios VALUES('$comentario')");
+    $resultado = $comando->execute();
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -43,7 +53,10 @@
                     <img onclick="Preencher('estrela4');" src="../imagens/star0.png" width="25px" class="estrela" id="estrela4">
                     <img onclick="Preencher('estrela5');" src="../imagens/star0.png" width="25px" class="estrela" id="estrela5">
                 </div>
+                <form action="item.php" method="post">
                 <textarea class="linha2" id="comentario" name="comentario" placeholder="Adicione um comentário..." wrap="hard" maxlength="2500"></textarea>
+                <input type="submit" class="botao1" value="avaliar" name="avaliar">
+                </form>
             </div>
         </div>
     </div>
